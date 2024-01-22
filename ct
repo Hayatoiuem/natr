@@ -636,6 +636,7 @@ function CheckQuest()
             end
         end
     end
+CheckQuest()
 
     function UpdateIslandESP()
         for i,v in pairs(game:GetService("Workspace")["_WorldOrigin"].Locations:GetChildren()) do
