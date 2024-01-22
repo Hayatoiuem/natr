@@ -2154,11 +2154,9 @@ local CamShake = require(game.ReplicatedStorage.Util.CameraShaker)
 CamShake:Stop()
 
 local Section = G:AddSection({
-	Name = "Auto Farm ⛏️"
+	Name = "Auto Farm"
 })
-
-G:AddParagraph("Note","Genaral Farm")
-       
+      
 G:AddToggle({
 	Name = "Farm Level",
 	Default = false,
