@@ -636,7 +636,7 @@ function CheckQuest()
             end
         end
     end
-CheckQuest()
+    CheckQuest()
 
     function UpdateIslandESP()
         for i,v in pairs(game:GetService("Workspace")["_WorldOrigin"].Locations:GetChildren()) do
@@ -1975,6 +1975,11 @@ getgenv().ToTargets = function(p)
         wait(1)
         game:GetService("VirtualUser"):Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
     end)
+
+    local posX = 0
+    local posY = 60
+    local posZ = 0
+
 
     local Section = G:AddSection({
         Name = "Config"
