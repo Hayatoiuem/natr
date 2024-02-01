@@ -2015,7 +2015,7 @@ local Section = G:AddSection({
 	Name = "Farm DropDown"
 })
 
-M:AddToggle({
+G:AddToggle({
 	Name = "Auto Farm Level",
 	Default = false,
 	Callback = function(Value)
@@ -2024,7 +2024,7 @@ M:AddToggle({
 	end    
 })
 
-M:AddToggle({
+G:AddToggle({
 	Name = "Auto Farm Bone",
 	Default = false,
 	Callback = function(Value)
@@ -2032,7 +2032,7 @@ M:AddToggle({
 	end    
 })
 
-M:AddToggle({
+G:AddToggle({
 	Name = "Auto Cake Prince",
 	Default = false,
 	Callback = function(Value)
