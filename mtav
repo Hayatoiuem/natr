@@ -1664,31 +1664,6 @@ ToggleFarm = G:AddToggle({
 	end    
 })
 
-G:AddToggle({
-	Name = "Auto Farm Level",
-	Default = false,
-	Callback = function(Value)
-		_G.AutoLevel = Value
-        Stop_Tween(_G.AutoLevel)
-	end    
-})
-
-G:AddToggle({
-	Name = "Auto Farm Bone",
-	Default = false,
-	Callback = function(Value)
-		_G.AutoBone = Value
-	end    
-})
-
-G:AddToggle({
-	Name = "Auto Cake Prince",
-	Default = false,
-	Callback = function(Value)
-		_G.CakePrince = Value
-	end    
-})
-
 local Section = G:AddSection({
     Name = "Mastery Menu"
 })
