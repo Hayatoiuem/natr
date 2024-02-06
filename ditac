@@ -1,12 +1,3 @@
-print("i love your mom")
-print("i love khánh băng")
-print("i love vỹ")
-print("load succes")
-local Notification = require(game:GetService("ReplicatedStorage").Notification)
-Notification.new("<Color=Yellow> Loading <Jack Hub> <Color=/>"):Display()
-Notification.new("<Color=Red> Made by Jacker<Color=/>"):Display()
-Notification.new("<Color=Blue> Discord:https://discord.gg/RE3aBJHdMa <Color=/>"):Display()
--------------------// I Write... \\----------------------------------------
 
 
 if game.PlaceId == 2753915549 then
@@ -15,11 +6,9 @@ elseif game.PlaceId == 4442272183 then
     Sea2 = true
 elseif game.PlaceId == 7449423635 then
     Sea3 = true
-else
-    game:GetService("Players").LocalPlayer:Kick("Do not Support, Please wait...")
 end
 
-------// CheckQuest \\---------------------
+
 
 local MyLevel = game:GetService("Players").LocalPlayer.Data.Level.Value
 function QuestCheck() 
@@ -1466,176 +1455,83 @@ function AttackHit()
     end
 end
 
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Jackermissyou/jackhub/main/ui.lua')))()
-local Window = OrionLib:MakeWindow({Name = "Jack Hub Blox Fruit", HidePremium = false,IntroText = "Jack  Hub", SaveConfig = true, ConfigFolder = "Jack Hub"})
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nghiavndeptraivcc/Orion-nhu-cut/main/Orion.Source')))()
+local Window = OrionLib:MakeWindow({Name = "Night Hub(Blox Fruit)", HidePremium = false,IntroText = "Night Hub", SaveConfig = true, ConfigFolder = "Night Hub"})
 
-function Notify(h,i)
-    OrionLib:MakeNotification({
-        Name = "Jack Hub",
-        Content = h,
-        Image = "rbxassetid://15935059060",
-        Time = i
-    })
-end
 
-Notify("Welcome To Jack Hub Release",5)
-Notify("Thank for use",5)
+
+Notify("Welcome To Night Hub Release",5)
+Notify("Night Hub Is Back!!!!!!!",5)
 
 local I = Window:MakeTab({
 	Name = "Info",
-	Icon = "rbxassetid://15935059060",
+	Icon = "rbxassetid://15541504459",
 	PremiumOnly = false
 })
 
 local G = Window:MakeTab({
 	Name = "General",
-	Icon = "rbxassetid://15935059060",
+	Icon = "rbxassetid://15541504459",
 	PremiumOnly = false
 })
 
 local IQ = Window:MakeTab({
 	Name = "Item & Quest",
-	Icon = "rbxassetid://15935059060",
+	Icon = "rbxassetid://15541504459",
 	PremiumOnly = false
 })
 
 local SE = Window:MakeTab({
-	Name = "Sea Event ",---Mirage
-	Icon = "rrbxassetid://15935059060",
+	Name = "Sea Event",
+	Icon = "rbxassetid://15541504459",
 	PremiumOnly = false
 })
-local SUY = Window:MakeTab({
-	Name = " Mirage",---Mirage
-	Icon = "rrbxassetid://15935059060",
-	PremiumOnly = false
-})
-SUY:AddToggle({
-    Name = "Auto Mirage Island",
-    Default = false,
-    Flag = "Auto to Mirage",
-    Save = true,
-    Callback = function(Value)
-        _G.AutoMysticIsland = Value
-        StopTween(_G.AutoMysticIsland)
-    end    
-})
 
-SUY:AddToggle({
-    Name = "Teleport To Mirage Island",
-    Default = false,
-    Flag = "Teleport to Mirage",
-    Save = true,
-    Callback = function(Value)
-        _G.AutoMysticIsland = Value
-        StopTween(_G.AutoMysticIsland)
-    end    
-})
-SUY:AddToggle({
-    Name = "Teleport To Gear ",
-    Default = false,
-    Flag = "Teleport to Gear",
-    Save = true,
-    Callback = function(Value)
-        _G.TweenToGear = Value
-        StopTween(_G.TweenToGear)
-    end    
-})
-spawn(function()
-    pcall(function()
-        while wait() do
-            if _G.TweenToGear then
-				if game:GetService("Workspace").Map:FindFirstChild("MysticIsland") then
-					for i,v in pairs(game:GetService("Workspace").Map.MysticIsland:GetChildren()) do 
-						if v:IsA("MeshPart")then 
-                            if v.Material ==  Enum.Material.Neon then  
-                                Tween(v.CFrame)
-                            end
-                        end
-					end
-				end
-			end
-        end
-    end)
-    end)
-    SUY:AddToggle({
-        Name = "Lock Moon and use race v3 ",
-        Default = false,
-        Flag = "Lock Moon and use race v3",
-        Save = true,
-        Callback = function(Value)
-            _G.AutoLockMoon = Value
-            StopTween(_G.AutoLockMoon)
-        end    
-    })
-    spawn(function()
-        while wait() do
-            pcall(function()
-                if _G.AutoLockMoon then
-                    local moonDir = game.Lighting:GetMoonDirection()
-                    local lookAtPos = game.Workspace.CurrentCamera.CFrame.p + moonDir * 100
-                    game.Workspace.CurrentCamera.CFrame = CFrame.lookAt(game.Workspace.CurrentCamera.CFrame.p, lookAtPos)
-                end
-            end)
-        end
-    end)
-
-
-    spawn(function()
-        while wait() do
-            pcall(function()
-                if _G.AutoLockMoon then
-                    game:GetService("VirtualInputManager"):SendKeyEvent(true,"T",false,game)
-                    wait(0.1)
-                    game:GetService("VirtualInputManager"):SendKeyEvent(false,"T",false,game)
-                end
-            end)
-        end
-    end)
 local KI = Window:MakeTab({
 	Name = "Kitsune Event",
-	Icon = "rbxassetid://15935059060",
+	Icon = "rbxassetid://15541504459",
 	PremiumOnly = false
 })
 
 local SV = Window:MakeTab({
 	Name = "Status & Servers",
-	Icon = "rbxassetid://15935059060",
+	Icon = "rbxassetid://15541504459",
 	PremiumOnly = false
 })
 
 local R = Window:MakeTab({
-	Name = "Fully Raid",
-	Icon = "rbxassetid://15935059060",
+	Name = "Raid(One Click)",
+	Icon = "rbxassetid://15541504459",
 	PremiumOnly = false
 })
 
 local DV = Window:MakeTab({
 	Name = "Devil Fruit",
-	Icon = "rbxassetid://15935059060",
+	Icon = "rbxassetid://15541504459",
 	PremiumOnly = false
 })
 
 local RC = Window:MakeTab({
 	Name = "Race V4",
-	Icon = "rbxassetid://15935059060",
+	Icon = "rbxassetid://15541504459",
 	PremiumOnly = false
 })
 
 local LC = Window:MakeTab({
 	Name = "Local Players",
-	Icon = "rbxassetid://15935059060",
+	Icon = "rbxassetid://15541504459",
 	PremiumOnly = false
 })
 
 local SH = Window:MakeTab({
 	Name = "Shop",
-	Icon = "rbxassetid://15935059060",
+	Icon = "rbxassetid://15541504459",
 	PremiumOnly = false
 })
 
 local SM = Window:MakeTab({
 	Name = "Settings & Misc",
-	Icon = "rbxassetid://15935059060",
+	Icon = "rbxassetid://15541504459",
 	PremiumOnly = false
 })
 
@@ -1646,27 +1542,10 @@ local Section = I:AddSection({
 	Name = "Info"
 })
 
-I:AddLabel("Owner : Jack")
-
-I:AddLabel("Dev : Jacker, I am so sad,Vỹ")
-I:AddLabel("Version : Main")
-
+I:AddLabel("Owner : HAYATO")
 I:AddLabel("Support Fluxus")
-I:AddLabel("Status : Normal")
 
-local Section = I:AddSection({
-	Name = "Update"
-})
 
-I:AddLabel("Fix Bring Mob")
-I:AddLabel("Fix FastAttack")
-I:AddLabel("Added FastAttack For Terror Shark")
-I:AddLabel("Remove Line Trash")
-I:AddLabel("Added Fix Lag")
-I:AddLabel("Auto Bone : Fix")
-I:AddLabel("Auto Dought Boss : Fix")
-I:AddLabel("Auto Elite : Fix")
-I:AddLabel("Auto Farm : Fix")
 
 ------// General \\---------------------------------------
 
@@ -1674,7 +1553,7 @@ local Section = G:AddSection({
 	Name = "Select Weapon"
 })
 
-local WeaponList = {"Melee","Sword",}
+local WeaponList = {"Melee","Sword","Fruit","Gun"}
 G:AddDropdown({
 	Name = "Select Weapon",
 	Default = "Melee",
@@ -1706,8 +1585,7 @@ task.spawn(
                 end
             end
         end
-    end
-)
+    end)
 
 
 local Section = G:AddSection({
@@ -1724,17 +1602,6 @@ G:AddToggle({
         StopTween(_G.V4)
 	end    
 })
-G:AddToggle({
-	Name = "Turn On V3",
-	Default = false,
-    Flag = "Turn On V3",
-    Save = true,
-	Callback = function(Value)
-		_G.V3 = Value
-        StopTween(_G.V3)
-	end    
-})
-
 
 local StatsList = {"Melee", "Defense", "Sword", "Gun ", "Blox Fruit"}
 G:AddDropdown({
@@ -1811,7 +1678,7 @@ G:AddDropdown({
 	end    
 })
 
-G:AddToggle({
+ToggleFarm = G:AddToggle({
 	Name = "Start Farm",
 	Default = false,
     Flag = "Start Farm",
@@ -2018,81 +1885,6 @@ IQ:AddToggle({
         StopTween(_G.AutoCandy)
 	end    
 })
-IQ:AddToggle({
-	Name = "Auto 600mas Mele",
-	Default = false,
-    Flag = "Auto 600mas Mele",
-    Save = true,
-	Callback = function(Value)
-		MasMelee = Value
-   
-        StopTween(MasMelee)
-	end    
-})
-spawn(function()
-    while wait() do
-        pcall(function()
-            if MasMelee then
-                if game.Players.LocalPlayer.Character:FindFirstChild("Black Leg") and (game.Players.LocalPlayer.Character:FindFirstChild("Black Leg")).Level.Value >= 600 or game.Players.LocalPlayer.Backpack:FindFirstChild("Black Leg") and (game.Players.LocalPlayer.Backpack:FindFirstChild("Black Leg")).Level.Value >= 600 then
-                    wait(1)
-                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyElectro")
-                elseif game.Players.LocalPlayer.Character:FindFirstChild("Electro") and (game.Players.LocalPlayer.Character:FindFirstChild("Electro")).Level.Value >= 600 or game.Players.LocalPlayer.Backpack:FindFirstChild("Electro") and (game.Players.LocalPlayer.Backpack:FindFirstChild("Electro")).Level.Value >= 600 then
-                    wait(1)
-                    local args = {
-                        [1] = "BuyFishmanKarate"
-                    }
-                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-                elseif game.Players.LocalPlayer.Character:FindFirstChild("Fishman Karate") and (game.Players.LocalPlayer.Character:FindFirstChild("Fishman Karate")).Level.Value >= 600 or game.Players.LocalPlayer.Backpack:FindFirstChild("Fishman Karate") and (game.Players.LocalPlayer.Backpack:FindFirstChild("Fishman Karate")).Level.Value >= 600 then
-                    wait(1)
-                    local args = {
-                        [1] = "BlackbeardReward",
-                        [2] = "DragonClaw",
-                        [3] = "2"
-                    }
-                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-                elseif game.Players.LocalPlayer.Character:FindFirstChild("Dragon Claw") and (game.Players.LocalPlayer.Character:FindFirstChild("Dragon Claw")).Level.Value >= 600 or game.Players.LocalPlayer.Backpack:FindFirstChild("Dragon Claw") and (game.Players.LocalPlayer.Backpack:FindFirstChild("Dragon Claw")).Level.Value >= 600 then
-                    wait(1)
-                    local args = {
-                        [1] = "BuySuperhuman"
-                    }
-                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-                elseif game.Players.LocalPlayer.Character:FindFirstChild("Superhuman") and (game.Players.LocalPlayer.Character:FindFirstChild("Superhuman")).Level.Value >= 600 or game.Players.LocalPlayer.Backpack:FindFirstChild("Superhuman") and (game.Players.LocalPlayer.Backpack:FindFirstChild("Superhuman")).Level.Value >= 600 then
-                    wait(1)
-                    local string_1 = "BuyElectricClaw"
-                    local Target = game:GetService("ReplicatedStorage").Remotes.CommF_
-                    Target:InvokeServer(string_1)
-                elseif game.Players.LocalPlayer.Character:FindFirstChild("Electric Claw") and (game.Players.LocalPlayer.Character:FindFirstChild("Electric Claw")).Level.Value >= 600 or game.Players.LocalPlayer.Backpack:FindFirstChild("Electric Claw") and (game.Players.LocalPlayer.Backpack:FindFirstChild("Electric Claw")).Level.Value >= 600 then
-                    wait(1)
-                    local args = {
-                        [1] = "BuySharkmanKarate"
-                    }
-                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-                elseif game.Players.LocalPlayer.Character:FindFirstChild("Sharkman Karate") and (game.Players.LocalPlayer.Character:FindFirstChild("Sharkman Karate")).Level.Value >= 600 or game.Players.LocalPlayer.Backpack:FindFirstChild("Sharkman Karate") and (game.Players.LocalPlayer.Backpack:FindFirstChild("Sharkman Karate")).Level.Value >= 600 then
-                    wait(1)
-                    local args = {
-                        [1] = "BuyDeathStep"
-                    }
-                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-                elseif game.Players.LocalPlayer.Character:FindFirstChild("Death Step") and (game.Players.LocalPlayer.Character:FindFirstChild("Death Step")).Level.Value >= 600 or game.Players.LocalPlayer.Backpack:FindFirstChild("Death Step") and (game.Players.LocalPlayer.Backpack:FindFirstChild("Death Step")).Level.Value >= 600 then
-                    wait(1)
-                    local args = {
-                        [1] = "BuyDragonTalon"
-                    }
-                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-                elseif game.Players.LocalPlayer.Character:FindFirstChild("Dragon Talon") and (game.Players.LocalPlayer.Character:FindFirstChild("Dragon Talon")).Level.Value >= 600 or game.Players.LocalPlayer.Backpack:FindFirstChild("Dragon Talon") and (game.Players.LocalPlayer.Backpack:FindFirstChild("Dragon Talon")).Level.Value >= 600 then
-                    wait(1)
-                    local args = {
-                        [1] = "BuyGodhuman"
-                    }
-                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-                elseif game.Players.LocalPlayer.Character:FindFirstChild("God Human") and (game.Players.LocalPlayer.Character:FindFirstChild("God Human")).Level.Value >= 600 or game.Players.LocalPlayer.Backpack:FindFirstChild("God Human") and (game.Players.LocalPlayer.Backpack:FindFirstChild("God Human")).Level.Value >= 600 then
-                    wait(1)
-                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySanguineArt")
-                end
-            end
-        end)
-    end
-end)
 
 -----// LC \\----------------------
 
@@ -2298,7 +2090,16 @@ LC:AddToggle({
     end    
 })
 
-
+LC:AddToggle({
+    Name = "Teleport To Mirage Island",
+    Default = false,
+    Flag = "Teleport to Mirage",
+    Save = true,
+    Callback = function(Value)
+        _G.AutoMysticIsland = Value
+        StopTween(_G.AutoMysticIsland)
+    end    
+})
 
 ------// Raid \\--------------------
 
@@ -2336,33 +2137,12 @@ R:AddToggle({
 ------// Devil Fruit \\-----------------------
 
 DV:AddButton({
-    Name = "Random Fruits and bone",
+    Name = "Random Fruits",
     Callback = function()
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Cousin","Buy")
       end    
 })
-DV:AddToggle({
-    Name = "Auto Random Bone",
-    Default = false,
-    Flag = "Auto Random Bone",
-    Save = true,
-    Callback = function(Value)
-        _G.AutoRandomBone = Value
-    end    
-})
-spawn(function()
-    while wait(0.0000000000000000000000000000000000000000000000000001) do
-    if _G.AutoRandomBone then
-    local args = {
-     [1] = "Bones",
-     [2] = "Buy",
-     [3] = 1,
-     [4] = 1
-    }
-    game:GetService("ReplicatedStorage").Remotes.CommF:InvokeServer(unpack(args))
-    end
-    end
-    end)
+
 DV:AddToggle({
     Name = "Auto Random Fruits",
     Default = false,
@@ -2874,38 +2654,6 @@ KI:AddToggle({
         StopTween(_G.CollectAzure)
 	end    
 })
-task.spawn(function()
-    while task.wait() do
-        if _G.CollectAzure then
-            if not lumlinhhonLoopRunning then
-                lumlinhhonLoopRunning = true
-                task.spawn(function()
-                    while lumlinhhonLoopRunning do
-                        wait()
-                        local emberTemplate = game:GetService("Workspace").EmberTemplate
-                        local player = game.Players.LocalPlayer
-                        local humanoidRootPart = player.Character and player.Character:FindFirstChild("HumanoidRootPart")
-                        if humanoidRootPart then
-                            local partFound = false
-                            while not partFound and humanoidRootPart:IsDescendantOf(workspace) do
-                                for _, v in pairs(emberTemplate:GetDescendants()) do
-                                    if v:IsA("BasePart") and v.Name == "Part" then
-                                        partFound = true
-                                        humanoidRootPart.CFrame = v.CFrame
-                                        break
-                                    end
-                                end
-                                wait(0.3)
-                            end
-                        end
-                    end
-                end)
-            end
-        else
-            lumlinhhonLoopRunning = false
-        end
-    end
-end)
 
 ----------// Shop \\----------------------------------
 
@@ -2982,15 +2730,10 @@ SH:AddButton({
 SH:AddButton({
     Name = "Godhuman",
     Callback = function()
-        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyGodhuman")--BuySanguineArt
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyGodhuman")
       end    
 })
-SH:AddButton({
-    Name = "SanguineArt",
-    Callback = function()
-        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySanguineArt")--BuySanguineArt
-      end    
-})
+
 local Section = SH:AddSection({
     Name = "Haki :"
 })
@@ -3941,17 +3684,6 @@ spawn(
         end
     end
 )
-spawn(
-    function()
-        while wait() do
-            if _G.V3 then
-                game:GetService("VirtualInputManager"):SendKeyEvent(true, "T", false, game)
-                wait(0.1)
-                game:GetService("VirtualInputManager"):SendKeyEvent(false, "T", false, game)
-            end
-        end
-    end
-)
 
 spawn(
     function()
@@ -4145,7 +3877,7 @@ spawn(function()
                         print("Vailon")
                         end
                     end)
-                    v:FindFirstChild("VehicleSeat").CFrame = CFrame.new(-30939.830078125, 3.729933261871338, 9256.4208984375)
+                    v:FindFirstChild("VehicleSeat").CFrame = CFrame.new(-44842.3945, 10.7790766, 16911.3477)
                     wait(1.0)
                     topos(game:GetService("Workspace").Boats.PirateBrigade.VehicleSeat.CFrame * CFrame.new(0, 3, 0))
                 end
@@ -4187,7 +3919,7 @@ spawn(function()
         elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149680" then
             Moon:Set("🌘: Full Moon 15%")
         else
-            Moon:Set("Chua co moon dit me may")
+            Moon:Set("Đeo co Moon")
         end
     end
 end)
